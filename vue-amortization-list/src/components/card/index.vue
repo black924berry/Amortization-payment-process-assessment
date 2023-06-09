@@ -20,7 +20,7 @@
 <script>
 export default {
   name: "Card",
-  props: ["game"],
+  props: ["amortization"],
   computed: {
     date() {
       return new Date(this.game.first_release_date).toLocaleDateString("en-US");
