@@ -3,16 +3,16 @@
     <div class="card-grid__image"></div>
     <div class="card-grid__body">
       <div class="card-grid__body__header">
-        {{ game.name }}
+        {{ amortization.project_id }}
       </div>
-      <div class="card-grid__body__date">Relesed Date {{ date }}</div>
+      <div class="card-grid__body__date">Schedule Date {{ date }}</div>
       <div class="card-grid__body__content">
-        {{ game.summary }}
+        {{ amortization.state }}
       </div>
     </div>
     <div class="card-grid__number">
       <div class="badge_number">
-        <span class="badge_number--padding">9</span>
+        <span class="badge_number--padding">{{ amortization.amount }}</span>
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@ export default {
   props: ["amortization"],
   computed: {
     date() {
-      return new Date(this.game.first_release_date).toLocaleDateString("en-US");
+      return new Date(this.amortization.schedule_date).toLocaleDateString("en-US");
     },
   },
 };
