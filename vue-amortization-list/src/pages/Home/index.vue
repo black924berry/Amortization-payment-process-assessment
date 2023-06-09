@@ -2,7 +2,7 @@
   <div class="container">
     <ul class="nav">
       <li>
-        <router-link to="/amortization" exact class="nav-link">Amortization List</router-link>
+        <router-link to="/amortization" exact class="nav-link">Amortization</router-link>
       </li>
     </ul>
     <div class="main">

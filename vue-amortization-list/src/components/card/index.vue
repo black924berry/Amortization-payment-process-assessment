@@ -5,14 +5,14 @@
       <div class="card-grid__body__header">
         {{ amortization.project_id }}
       </div>
-      <div class="card-grid__body__date">Schedule Date {{ date }}</div>
-      <div class="card-grid__body__content">
+      <div class="card-grid__body__date">Scheduled Date {{ date }}</div>
+      <div :class="['card-grid__body__content', amortization.state === 'paid' ? 'paid' : 'pending']">
         {{ amortization.state }}
       </div>
     </div>
     <div class="card-grid__number">
-      <div class="badge_number">
-        <span class="badge_number--padding">{{ amortization.amount }}</span>
+      <div class="amount_number">
+        <span class="amount_number--padding">{{ amortization.amount }}</span>
       </div>
     </div>
   </div>

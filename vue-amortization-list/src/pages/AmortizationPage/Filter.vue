@@ -1,7 +1,7 @@
 <template>
-  <div class="video-filter">
-    <div class="video-filter__title">Filter Results</div>
-    <div class="video-filter__body">
+  <div class="amortization-filter">
+    <div class="amortization-filter__title">Filter Results</div>
+    <div class="amortization-filter__body">
       <div class="body__item name-filter">
         <label>Project ID (contains)</label>
         <div class="body__item--input">

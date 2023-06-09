@@ -1,6 +1,6 @@
 <template>
   <div class="grid-container">
-    <div class="heading-video">Amortization</div>
+    <div class="heading-amortization">Amortization</div>
     <Filter />
     <AmortizationList />
   </div>
