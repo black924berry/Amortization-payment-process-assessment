@@ -2,7 +2,7 @@
   <div class="amortization-filter">
     <div class="amortization-filter__title">Filter Results</div>
     <div class="amortization-filter__body">
-      <div class="body__item name-filter">
+      <div class="body__item id-filter">
         <label>Project ID (contains)</label>
         <div class="body__item--input">
           <input
@@ -96,7 +96,7 @@ export default {
 
       if (validationPageNum(value)) {
         const pageNum = value.split("-");
-        if (parseInt(pageNum[0]) < parseInt(pageNum[1])) {
+        if (parseInt(pageNum[0]) <= parseInt(pageNum[1])) {
           this.setPageNum({
             from: parseInt(pageNum[0]),
             to: parseInt(pageNum[1]),

@@ -279,15 +279,6 @@ input:focus-visible {
   .heading-amortization {
     left: 50px;
   }
-
-  .heading-contact {
-    left: 390px;
-  }
-
-  .contact-grid {
-    padding-bottom: 70px;
-    padding-top: 70px;
-  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -333,7 +324,7 @@ input:focus-visible {
     grid-template-columns: 2fr 5fr 1fr;
   }
 
-  .name-filter {
+  .id-filter {
     grid-column-start: 1;
     grid-column-end: 4;
   }
@@ -459,7 +450,7 @@ input:focus-visible {
     height: 27.5em;
   }
 
-  .name-filter {
+  .id-filter {
     grid-column: 1;
   }
 
