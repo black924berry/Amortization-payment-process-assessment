@@ -66,12 +66,15 @@ export default {
       type: "dec",
     };
   },
+
+  // set the computed variables pid and pageNum
   computed: {
     ...mapState({
       pid: (state) => state.pid,
       pageNum: (state) => state.pageNum,
     }),
   },
+
   methods: {
     ...mapMutations([
       "setPid",
@@ -87,10 +90,14 @@ export default {
         this.type = "dec";
       }
     },
+
+    // handle the id search using setPid mutation
     handleSearchText(event) {
       const pid = event.target.value;
       this.setPid(pid);
     },
+
+    // handle the page search from A to B using setPageNum mutation
     handlePageNum(event) {
       const value = event.target.value;
 
@@ -104,10 +111,14 @@ export default {
         }
       }
     },
+
+    // handle the order by schedule date, amount, project id using setSortingOrder mutation
     handleSortingOrder(event) {
       const value = event.target.value;
       this.setSortingOrder(value);
     },
+
+    // handle the sort type as dec or asc using setSortingType mutation
     handleSortingType() {
       if (this.type === "dec") {
         this.type = "asc";
@@ -116,6 +127,8 @@ export default {
       }
       this.setSortingType(this.type);
     },
+
+    // reset the filter fields
     reset() {
       this.resetFilter();
     },
