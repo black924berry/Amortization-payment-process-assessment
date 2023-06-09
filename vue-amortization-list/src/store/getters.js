@@ -1,17 +1,12 @@
 export const getAmortizationList = (state) => {
   const amortizations = JSON.parse(JSON.stringify(state.amortizations));
-  const searchKey = state.searchKey.toUpperCase();
+  const pid = state.pid;
   const sort = state.sort;
   const pageNum = state.pageNum;
   var results;
 
-  if (searchKey) {
-    results = amortizations.filter((amortization) => {
-      return (
-        amortization?.name?.toUpperCase().indexOf(searchKey) !== -1 ||
-        amortization?.summary?.toUpperCase().indexOf(searchKey) !== -1
-      );
-    });
+  if (pid) {
+    results = amortizations.filter((amortization) =>  Number(amortization?.project_id) === Number(pid));
   } else {
     results = amortizations;
   }

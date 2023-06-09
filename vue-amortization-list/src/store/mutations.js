@@ -2,8 +2,8 @@ export const setAmortizationList = (state, amortizations) => {
   state.amortizations = amortizations;
 };
 
-export const setSearchKey = (state, searchKey) => {
-  state.searchKey = searchKey;
+export const setPid = (state, pid) => {
+  state.pid = pid;
 };
 
 export const setPageNum = (state, pageNum) => {

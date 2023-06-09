@@ -5,7 +5,7 @@ import * as mutations from "./mutations";
 
 const state = {
   amortizations: [],
-  searchKey: "",
+  pid: "",
   pageNum: {
     from: 1,
     to: 10,

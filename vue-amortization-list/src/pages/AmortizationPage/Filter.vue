@@ -3,12 +3,12 @@
     <div class="video-filter__title">Filter Results</div>
     <div class="video-filter__body">
       <div class="body__item name-filter">
-        <label>Name (contains)</label>
+        <label>Project ID (contains)</label>
         <div class="body__item--input">
           <input
             type="text"
-            name="searchKey"
-            :value="searchKey"
+            name="pid"
+            :value="pid"
             @change="handleSearchText"
             placeholder="Text string"
           />
@@ -42,9 +42,9 @@
               name="handleSorting"
               @change="handleSortingOrder"
             >
-              <option value="date">Release Date</option>
-              <option value="score">Score</option>
-              <option value="name">Name</option>
+              <option value="date">Schedule Date</option>
+              <option value="amount">Amount</option>
+              <option value="pid">ProjectID</option>
             </select>
           </div>
         </div>
@@ -68,13 +68,13 @@ export default {
   },
   computed: {
     ...mapState({
-      searchKey: (state) => state.searchKey,
+      pid: (state) => state.pid,
       pageNum: (state) => state.pageNum,
     }),
   },
   methods: {
     ...mapMutations([
-      "setSearchKey",
+      "setPid",
       "setPageNum",
       "setSortingOrder",
       "setSortingType",
@@ -88,8 +88,8 @@ export default {
       }
     },
     handleSearchText(event) {
-      const searchKey = event.target.value;
-      this.setSearchKey(searchKey);
+      const pid = event.target.value;
+      this.setPid(pid);
     },
     handlePageNum(event) {
       const value = event.target.value;
