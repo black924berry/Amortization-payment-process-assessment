@@ -14,39 +14,27 @@ export const getAmortizationList = (state) => {
   switch (sort.orderBy) {
     case "date":
       if (sort.type === "dec") {
+        results?.sort((a, b) => new Date(b.schedule_date) - new Date(a.schedule_date));
+      } else {
+        results?.sort((a, b) => new Date(a.schedule_date) - new Date(b.schedule_date));
+      }
+      break;
+    case "amount":
+      if (sort.type === "dec") {
         results?.sort((a, b) => {
-          return b.first_release_date - a.first_release_date;
+          return b.amount - a.amount;
         });
       } else {
         results?.sort((a, b) => {
-          return a.first_release_date - b.first_release_date;
+          return a.amount - b.amount;
         });
       }
       break;
-    case "score":
+    case "pid":
       if (sort.type === "dec") {
-        results?.sort((a, b) => {
-          return b.rating - a.rating;
-        });
+        results?.sort((a, b) => b.project_id - a.project_id);
       } else {
-        results?.sort((a, b) => {
-          return a.rating - b.rating;
-        });
-      }
-      break;
-    case "name":
-      if (sort.type === "dec") {
-        results?.sort((a, b) => {
-          let x = a.name.toUpperCase(),
-            y = b.name.toUpperCase();
-          return x === y ? 0 : x > y ? -1 : 1;
-        });
-      } else {
-        results?.sort((a, b) => {
-          let x = a.name.toUpperCase(),
-            y = b.name.toUpperCase();
-          return x === y ? 0 : x > y ? 1 : -1;
-        });
+        results?.sort((a, b) => a.project_id - b.project_id);
       }
       break;
     default:
