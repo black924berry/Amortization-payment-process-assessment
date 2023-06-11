@@ -1,7 +1,4 @@
-export const config = {
-  SERVER_URL: "https://public.connectnow.org.uk/applicant-test/",
-};
-
+// validate pageNum value is Number
 export const validationPageNum = (value) => {
   const re = /^\d+(-\d+)*$/;
   return re.test(String(value));
