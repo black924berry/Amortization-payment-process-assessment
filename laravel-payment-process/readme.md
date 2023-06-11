@@ -70,7 +70,7 @@
 
 ### 4. Sending Emails:
 
-- In the above, the function `sendDelayedPaymentEmails` is responsible for sending the delayed payment notification email to the project promoter and profiles.
+- In the `Index.php`, the function `sendDelayedPaymentEmails` is responsible for sending the delayed payment notification email to the project promoter and profiles.
 - Need to create an appropriate mail template (`DelayedPaymentEmail`) and configure Laravel to use an email service provider.
 ### 5. Additional Considerations:
 - Implement proper error handling, logging, and exception handling in the Laravel function.
