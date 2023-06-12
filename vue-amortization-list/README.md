@@ -20,6 +20,6 @@ npm run build
 npm run lint
 ```
 
-### Demo URL
+## Demo URL
 https://amortization-payment-process-assessment-e4oba0kaa.vercel.app/
 
