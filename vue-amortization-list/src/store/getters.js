@@ -1,3 +1,4 @@
+// getter function to get the amortization list from store
 export const getAmortizationList = (state) => {
   const amortizations = JSON.parse(JSON.stringify(state.amortizations));
   const pid = state.pid;
